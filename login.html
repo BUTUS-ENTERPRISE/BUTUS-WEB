@@ -173,7 +173,7 @@
                         <label>Mot de passe</label>
                         <input type="password" placeholder="Votre mot de passe">
                     </div>
-                    <button type="submit" class="login-button">Se connecter</button>
+                    <button type="submit" class="login-button" id="bouton-login">Se connecter</button>
                     
                     <div class="social-login">
                         <p>Ou utiliser</p>
@@ -192,7 +192,10 @@
         </div>
     </div>
     <script>
-   
+    document.getElementById("bouton-login").addEventListener("click", function(event) {
+    event.preventDefault(); // Empêche le comportement par défaut du bouton s'il est dans un formulaire
+    window.location.href = "accueil.html"; // Redirige vers la page d'accueil
+  });
 
     </script>
 </body>
