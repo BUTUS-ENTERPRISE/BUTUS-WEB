@@ -20,7 +20,9 @@
             align-items: center;
             padding: 1rem;
         }
-
+        a{
+            text-decoration: none;
+        }
         .login-container {
             display: flex;
             max-width: 1000px;
@@ -90,7 +92,7 @@
         }
 
         .login-button {
-            width: 100%;
+            max-width: 100%;
             padding: 1rem;
             background: #00E676;
             border: none;
@@ -173,7 +175,9 @@
                         <label>Mot de passe</label>
                         <input type="password" placeholder="Votre mot de passe">
                     </div>
-                    <button type="submit" class="login-button" id="bouton-login">Se connecter</button>
+                   <div class="bouton-cont">
+                    <a href="acceuil.html" class="login-button">Se connecter</a>
+                   </div>
                     
                     <div class="social-login">
                         <p>Ou utiliser</p>
@@ -191,11 +195,7 @@
             </div>
         </div>
     </div>
-    <script>
-    document.getElementById("bouton-login").addEventListener("click", function(event) {
-    window.location.href = "accueil.html"; // Redirige vers la page d'accueil
-  });
 
-    </script>
+  
 </body>
 </html>
