@@ -216,13 +216,10 @@
     </div>
 
     <script>
-       document.querySelector(".login-button").addEventListener("click", function() {
-        // Simuler l'inscription réussie
-        localStorage.setItem("user_registered", "true");
+       if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "register.html"; // Vérifie si l'utilisateur est connecté
+}
 
-        // Rediriger vers index.html
-        window.location.href = "index.html";
-    });
     </script>
     
 </body>
