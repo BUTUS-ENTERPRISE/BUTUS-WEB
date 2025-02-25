@@ -32,7 +32,102 @@
             </nav>
         </header>
 
-        <!-- De grace mettez me contenu ici a partir de la partie de la bannière  -->
+        <!-- Bannière -->
+        <section class="banner">
+            <img src="images/bannières/ban-produits.png" alt="Electronique Banner">
+        </section>
+
+        <!-- Catégories de produits -->
+        <section class="categories">
+            <div class="category-nav">
+                <div>
+                    <a href="#">Electronique</a>
+                    <a href="#">Cosmétique</a>
+                    <a href="#">Vêtements</a>
+                    <a href="#">Livres</a>
+                    <a href="#">Outils</a>
+                    <a href="#" class="active">Tout voir</a>
+                </div>
+                <div class="nav-arrows">
+                    <a href="#"><i class="fas fa-arrow-left"></i></a>
+                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <div class="product-card">
+                        <img src="images/produits/Group 168.png" alt="Bocal en verre">
+                        <h3 class="product-title">Bocal en verre</h3>
+                        <div class="product-price-row">
+                            <span class="product-price">300 fcfa / unité</span>
+                            <i class="fas fa-heart fav-icon"></i>
+                        </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="product-card">
+                        <img src="images/produits/Group 169.png" alt="Montre Mens hand">
+                        <h3 class="product-title">Montre Mens hand</h3>
+                        <div class="product-price-row">
+                            <span class="product-price">5000 fcfa</span>
+                            <i class="fas fa-heart fav-icon"></i>
+                        </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="product-card">
+                        <img src="images/produits/Group 170.png" alt="Bouteille d'eau plastique">
+                        <h3 class="product-title">Bouteille d'eau plastique</h3>
+                        <div class="product-price-row">
+                            <span class="product-price">100 fcfa / unité</span>
+                            <i class="fas fa-heart fav-icon"></i>
+                        </div>
+                </div>
+                
+                <!-- Produit 4 -->
+                <!-- <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/smartphone.jpg" alt="Smartphone">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smartphone Premium</h3>
+                        <div class="product-price-row">
+                            <span class="product-price">150000 fcfa</span>
+                            <i class="fas fa-heart fav-icon"></i>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Produit 5 -->
+                <!-- <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/headphones.jpg" alt="Casque audio">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Casque audio sans fil</h3>
+                        <div class="product-price-row">
+                            <span class="product-price">45000 fcfa</span>
+                            <i class="fas fa-heart fav-icon"></i>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Produit 6 -->
+                <!-- <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/drill.jpg" alt="Perceuse électrique">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Perceuse électrique</h3>
+                        <div class="product-price-row">
+                            <span class="product-price">25000 fcfa</span>
+                            <i class="fas fa-heart fav-icon"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
@@ -79,8 +174,16 @@
     </footer>
 
     <script>
+        // Script pour le menu responsive
         document.querySelector('.menu-list').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Script pour les favoris
+        document.querySelectorAll('.fav-icon').forEach(icon => {
+            icon.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
         });
     </script>
 </body>

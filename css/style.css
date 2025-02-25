@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
+    overflow-x: hidden;
     flex-direction: column;
 }
 
@@ -36,7 +37,7 @@ body {
 }
 
 .logo span {
-    color: #00ff00;
+    color: rgb(9, 170, 9);
 }
 
 .nav-links {
@@ -52,7 +53,7 @@ body {
 }
 
 .nav-links a.active {
-    color: green;
+    color: rgb(9, 170, 9);
     font-weight: bold;
     font-size: 18px;
 }
@@ -104,7 +105,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: #00ff00;
+    color: rgb(9, 170, 9);
 }
 
 .social-icons {
@@ -120,7 +121,103 @@ body {
 }
 
 .social-icons a:hover {
-    color: #00ff00;
+    color: rgb(9, 170, 9);
+}
+/* Styles pour la bannière */
+.banner {
+    width: 95%;
+    margin: 2rem;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Styles pour les catégories */
+.categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.category-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #666;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.category-nav a:hover, .category-nav a.active {
+    color: rgb(9, 170, 9);
+}
+
+.nav-arrows {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-arrows a {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Styles pour les produits */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 8rem;
+}
+
+.product-card {
+    background: #fff;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.product-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.fav-icon {
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.fav-icon.active {
+    color: #ff0000;
 }
 
 /* Responsive styles */
@@ -148,6 +245,18 @@ body {
 
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-nav {
+        padding-bottom: 0.5rem;
+    }
+    
+    .category-nav a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
     }
 }
 
