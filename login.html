@@ -192,19 +192,7 @@
         </div>
     </div>
     <script>
-      document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Empêche le rechargement immédiat
-
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-
-    if (username === "admin" && password === "1234") {
-        localStorage.setItem("loggedIn", "true"); // Stocke l'état de connexion
-        window.location.href = "index.html"; // Redirige vers l'index
-    } else {
-        alert("Identifiants incorrects !");
-    }
-});
+   
 
     </script>
 </body>
