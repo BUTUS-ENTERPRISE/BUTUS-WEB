@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Butus - Inscription</title>
+    <title>Butus - Connexion</title>
     <style>
         * {
             margin: 0;
@@ -28,7 +28,6 @@
             background: white;
             border-radius: 30px;
             overflow: hidden;
-            height: 650px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
@@ -49,7 +48,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 90vh;
+            height: auto;
         }
 
         .right-panel {
@@ -60,7 +59,6 @@
         .form-container {
             max-width: 400px;
             margin: 0 auto;
-            height: 30%;
         }
 
         h2 {
@@ -134,20 +132,7 @@
             text-align: center;
             color: #666;
         }
-        .terms-group {
-            margin: 1rem 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            color: #666;
-            font-size: 0.9rem;
-        }
 
-        .terms-group input[type="checkbox"] {
-            margin-top: 3px;
-        }
-
-      
         @media (max-width: 768px) {
             .login-container {
                 flex-direction: column;
@@ -178,12 +163,8 @@
         </div>
         <div class="right-panel">
             <div class="form-container">
-                <h2>Inscription</h2>
-                <form>
-                    <div class="form-group">
-                        <label>Pseudonyme</label>
-                        <input type="text" placeholder="Votre pseudo">
-                    </div>
+                <h2>Connexion</h2>
+                <form id="login-form">
                     <div class="form-group">
                         <label>Email</label>
                         <input type="email" placeholder="Votre email">
@@ -192,11 +173,7 @@
                         <label>Mot de passe</label>
                         <input type="password" placeholder="Votre mot de passe">
                     </div>
-                    <div class="terms-group">
-                        <input type="checkbox" id="terms" required>
-                        <label for="terms">J'accepte les termes du <a href="#">Conditions d'utilisation</a> et <a href="#">Politique de confidentialité</a></label>
-                    </div>
-                    <button type="submit" class="login-button">S'enregitrer</button>
+                    <button type="submit" class="login-button">Se connecter</button>
                     
                     <div class="social-login">
                         <p>Ou utiliser</p>
@@ -208,11 +185,17 @@
                     </div>
                     
                     <div class="create-account">
-                        Déjà un compte ? <a href="login.html">Se connecter</a>
+                        Vous n'avez pas de compte ? <a href="index.html">Créer un compte</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "index.html";
+        });
+    </script>
 </body>
 </html>
