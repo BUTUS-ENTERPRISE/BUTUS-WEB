@@ -223,6 +223,139 @@ body {
 .fav-icon.active {
     color: #ff0000;
 }
+/* debut style pour le panier */
+.panier-grid{
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2%;
+    margin: 2rem;
+}
+
+
+.panier-card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding-top: 2%;
+    position: relative;
+}
+
+.panier-card img {
+    width: 40%;
+    height: auto;
+    padding-right: 5%;
+}
+
+.panier-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%
+}
+.panier-info #trash {
+    align-self: flex-end;
+}
+.panier-price-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #ebeae8;
+    width: 60%;
+    padding-right: 5%;
+    border-radius: 5%;
+    position: absolute;
+    font-size: 70% ;
+    bottom: 10%;
+    right: 0;
+
+    
+}
+.paye button {
+    width: 100%;
+    background-color: #4bd190;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.confident p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+}
+.checkbox-container{
+    background-color: #ebeae8;
+}
+.product-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #4bd190;
+}
+.product-checkbox.avtive{
+ color: #4bd190;
+}
+.panier-price-row ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem; 
+}
+.panier-price-row span{
+    text-align: left;
+    width: 100%;
+    padding-left: 18%;
+    padding-top: 10%;
+}
+.panier-grid i{
+    color: #4bd190;
+}
+.panier-recap{
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    margin-bottom: 20%;
+    margin-left: 20%;
+    padding-left: 10%;
+}
+.calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calc p {
+    text-align: left;
+}
+
+.calc span {
+    text-align: right;
+}
+.paye ul{
+    list-style: none;
+    display: flex;
+}
+.paye img{
+    width: 50px;
+            height: 30px;
+            object-fit: contain;
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -278,6 +411,40 @@ body {
         margin: 1rem auto;
         padding: 0 1rem;
         width: calc(100% - 2rem);
+    }
+    .panier {
+        width: 100%;
+    }
+    
+    .panier-recap {
+        width: 100%;
+        position: static;
+        margin-top: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 10;
+        padding: 1rem;
+    }
+    
+    .menu-list {
+        display: block;
     }
 }
 
